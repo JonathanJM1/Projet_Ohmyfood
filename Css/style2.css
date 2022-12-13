@@ -1,0 +1,368 @@
+/*police du site web*/
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+html, p {
+  font-size: 16px;
+}
+
+/*Mise en forme du site web*/
+body, p, * {
+  font-family: "Roboto", sans-serif;
+  color: #4d4d4d;
+  font-size: 1rem;
+  font-weight: 100;
+  margin: 0;
+}
+
+h1 {
+  /*titres des 4 restaurants*/
+  font-weight: 900;
+  font-size: 1.6rem;
+  line-height: 32px;
+  color: black;
+  margin: 0.8em 0;
+}
+
+h3 {
+  /*noms des restaurants(page d'accueil + 4 pages restaurants)*/
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  color: black;
+}
+
+h5 {
+  /*titre ohmyfood pied de tête des 5 pages*/
+  color: #fff;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.2rem;
+  font-weight: 200;
+  margin: 0.8em 0;
+}
+
+span {
+  /*couleur prix*/
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4rem;
+  margin: 0;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  background-color: #eaeaea;
+  font-family: "Roboto", sans-serif;
+  color: #4d4d4d;
+  font-size: 1rem;
+  font-weight: 100;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* En-tête des pages restaurants*/
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+.header__arrow {
+  color: black;
+  font-size: x-large;
+  position: absolute;
+  left: 20px;
+  top: 18px;
+  text-decoration: none;
+}
+
+.header__logo {
+  position: relative;
+  font-family: "Shrikhand", cursive;
+  color: black;
+  font-size: 2rem;
+  padding: 10px 20px;
+  width: 100%;
+  box-shadow: 0 3px 9px rgb(218, 218, 218);
+  text-decoration: none;
+}
+
+.header__photo {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+/*bouton page d'accueil*/
+.btn {
+  margin-top: 30px;
+  padding: 15px;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  background: linear-gradient(0deg, #A35BDC 0%, #eb5dd5 60%, #EE74DB 100%);
+  box-shadow: 0px 2px 10px gray;
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 0px 3px 15px #4d4d4d;
+  background: linear-gradient(0deg, #af70e0 0%, #EE74DB 60%, #f18be1 100%);
+}
+
+/*bouton page restaurants*/
+.menu__btn {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 3em;
+}
+
+.menu__btn button {
+  width: 60%;
+  margin: 0;
+}
+
+/*carte pour les restaurants*/
+.group {
+  position: relative;
+  margin: 1rem 0;
+  background-color: #fff;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+ /*survol carte restaurants*/
+.group:hover {
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+  /*container pages du site*/
+.container {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container--space {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+/* ******************animation sur les coeurs****************** */
+.icon {
+  cursor: pointer;
+  /*dimmensions pour les icones*/
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+
+.icon i {
+  /*donner height pour voir l'icone grandir*/
+  color: black;
+  line-height: 1em;
+}
+
+.icon-heart {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  line-height: 1em;
+  transition: color 300ms ease-out;
+  top: 0%;
+}
+
+.icon-heart__full {
+  background: transparent;
+  /*transformation de l'icone en texte*/
+  -webkit-text-fill-color: transparent;
+}
+/* ********************* Nom du restau ********************* */
+.restau {
+  width: 100%;
+}
+
+.resto__nom {
+  border-radius: 40px 40px 0 0;
+  background-color: #f7f7f7;
+  position: relative;
+  margin-top: -50px;
+  padding: 2em 2em 1em 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.resto__nom h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+/*Menu des restaurants*/
+.carte {
+  width: 100%;
+}
+
+.titre {
+  /*titre des menus*/
+  text-transform: uppercase;
+  margin-top: 1em;
+  padding-bottom: 0.5em;
+  width: 10%;
+  border-bottom: 2px solid #99E2D0;
+}
+
+.list__menu {
+  /*texte des menus*/
+  overflow: hidden;
+  border-radius: 15px;
+  position: relative;
+  color: black;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0.7em;
+}
+
+.plat {
+  width: calc(100% - 35px);
+  transition: width 0.5s ease-in-out;
+}
+
+.plat h3 {
+  margin-bottom: 0.2em;
+}
+
+.plat p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+}
+
+.prix {
+  transform: translateX(0);
+  transition: 0.5s ease-in-out;
+  background-color: #fff;
+}
+
+.check {
+  /* logo vert pour valider les menus*/
+  position: absolute;
+  background-color: #99e2d0;
+  color: #fff;
+  border-radius: 0 15px 15px 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 60px;
+  transform: translateX(60px);
+  transition: 0.5s ease-in-out;
+}
+.check i {
+  /*icone*/
+  color: #fff;
+  position: absolute;
+  padding: 2px 4px;
+  right: 25%;
+  top: 50%;
+  transition: 0.5s ease-in-out;
+}
+.list__menu:hover .check {
+  /*animation vert qui apparait*/
+  transform: translateX(0);
+}
+.list__menu:hover .check i {
+  /*animation de l'icone tourne*/
+  transform: rotate(360deg);
+}
+.list__menu:hover .plat {
+  /*animation change*/
+  width: calc(100% - 90px);
+}
+.list__menu:hover .prix {
+  /*animation glisse vers la gauche*/
+  transform: translateX(-60px);
+}
+
+  /*animation décalage d'affichages menu*/
+.menu1 {
+  animation: menus 300ms 300ms ease-out both;
+  margin-bottom: 2em;
+}
+.menu2 {
+  animation: menus 300ms 600ms ease-out both;
+  margin-bottom: 2em;
+}
+.menu3 {
+  animation: menus 300ms 900ms ease-out both;
+  margin-bottom: 2em;
+}
+
+@keyframes menus {
+  from {
+    opacity: 0;
+    transform: translate(0, 20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+/*pied de page des pages du site*/
+.footer_list {
+  background-color: #383838;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.footer_list h3 {
+  margin-bottom: 6px;
+  font-family: "Shrikhand", cursive;
+}
+.footer_list ul {
+  padding-left: 0;
+}
+
+.footer_list ul li {
+  margin-bottom: 7px;
+}
+.footer_list ul li a {
+  color: white;
+}
+.footer_list ul li a i {
+  padding-right: 15px;
+  color:white;
+}

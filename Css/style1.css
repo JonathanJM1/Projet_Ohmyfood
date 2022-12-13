@@ -1,0 +1,460 @@
+/*police du site web*/
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+html, p {
+  font-size: 16px;
+}
+
+/*Mise en forme du site web*/
+h1 {
+  /*titres des 4 restaurants*/
+  font-weight: 900;
+  font-size: 1.6rem;
+  line-height: 32px;
+  color: black;
+  margin: 0.8em 0;
+}
+
+body, p, * {
+  font-family: "Roboto", sans-serif;
+  color: #4d4d4d;
+  font-size: 1rem;
+  font-weight: 100;
+  margin: 0;
+}
+
+h2 {
+  /*titres page d'accueil*/
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: black;
+}
+
+h3 {
+  /*noms des restaurants(page d'accueil + 4 pages restaurants)*/
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  color: black;
+}
+
+h5 {
+  /*titre ohmyfood pied de tête des 5 pages*/
+  color: #fff;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.2rem;
+  font-weight: 200;
+  margin: 0.8em 0;
+}
+
+span {
+  /*fonctionnement text*/
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4rem;
+  margin: 0;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* En-tête de page site global*/
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+#logo {
+  width: 180px;
+}
+
+  /*Localisation page d'accueil*/
+
+.ville {
+  padding: 10px;
+  background-color: #eaeaea;
+  text-align: center;
+  color: rgb(77, 73, 73);
+}
+    
+.paris {
+  border: none;
+  background-color: #eaeaea;
+  font-size: 1.10rem;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+  width: 38.5%;
+}
+
+.paris::placeholder {
+color: rgb(77, 73, 73);
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.fa-location-dot {
+  font-size: 1.10rem;
+}
+
+  /*navigateur page d'accueil*/
+
+.nav_titre {
+  background-color: #F7F7F7;
+  padding: 11.5px;
+  text-align: center;
+}
+
+.reservez {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+/*bouton page d'accueil*/
+.btn {
+  margin-top: 30px;
+  padding: 15px;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  background: linear-gradient(350deg, #9356dc 0%, #ff79da 100%);
+  box-shadow: 0px 2px 10px gray;
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 0px 3px 15px #4d4d4d;
+  background: linear-gradient(350deg, #9356dc 0%, #ff79da 100%);
+}
+
+/*Fontionnement page d'accueil*/
+.fonction {
+  margin: 25px;
+  margin-top: 35px;
+  margin-bottom: 60px;
+}
+
+.fonction__liste {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.fonction__titre {
+  margin-bottom: 25px;
+}
+
+.fonction__number {
+  background-color: #F7F7F7;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 3px 15px #dedede;
+  font-weight: 500;
+  position: relative;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+
+.fonction__number i {
+  color: #746e6e;
+  margin-right: 10px;
+}
+
+.fonction__number:hover {
+  background-color: #F5EDFF;
+  cursor: pointer;
+  transform: scale(1.01);
+  box-shadow: 0px 3px 15px #c4c4c4;
+}
+
+.fonction__number:hover i {
+  color: #9152DB;
+}
+
+.fonction__number--number {
+background: #9152DB;
+position: absolute;
+  left: -8px;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  padding-top: 3px;
+  text-align: center;
+  color: white;
+  width: 20px;
+  height: 20px;
+}
+
+/*cartes pages du site web */
+.card {
+position: relative;
+margin: 1rem 0;
+background-color: #fff;
+box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+border-radius: 15px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: space-between;
+}
+
+.block {
+width: 100%;
+}
+
+.card img {
+height: 180px;
+object-fit: cover;
+object-position: 50% 60%;
+border-radius: 15px 15px 0 0;
+width: 100%;
+overflow: hidden;
+}
+
+.card_info {
+/*icone et les texte*/
+padding: 10px 15px;
+width: 100%;
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+justify-content: space-between;
+font-size: 1.1rem;
+}
+.lieux {
+margin: 0.2em 0;
+}
+
+.new {
+/*icone Nouveau*/
+background-color: #99E2D0;
+position: absolute;
+right: 5%;
+top: 7%;
+padding: 0.4em 1.2em;
+font-size: 0.8rem;
+border-radius: 0.1em;
+box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.1);
+color: #11473a;
+}
+
+.card:hover {
+box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+cursor: pointer;
+}
+
+  /*container pages du site*/
+.container {
+padding: 0 1rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+.container--restaurants {
+padding-top: 3em;
+padding-bottom: 3em;
+}
+
+/*proposition différent restaurants*/
+.restaurants {
+background-color: #f7f7f7;
+padding-bottom: 2em;
+}
+
+.restaurants_card {
+/*block de cards + titre*/
+width: 100%;
+}
+
+.restaurants button {
+width: 60%;
+}
+
+/* ******************animation sur les coeurs****************** */
+.icon {
+  cursor: pointer;
+  /*dimmensions pour les icones*/
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+.icon i {
+  /*donner height pour voir l'icone grandir*/
+  color: black;
+  line-height: 1em;
+}
+.icon-heart {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  line-height: 1em;
+  transition: color 300ms ease-out;
+  top: 0%;
+}
+.icon-heart__full {
+  background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
+  /*transformation de l'icone en texte*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /*animation coeur qui grandit*/
+  transform: scale(0);
+  transition: transform 300ms ease-out;
+}
+.icon-heart::before {
+  /*before c'est l'icone en element texte*/
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /*display block pour prendre toutes l'espace*/
+  display: block;
+}
+.icon:hover .icon-heart__full {
+  /*changement la scale du coeur*/
+  transform: scale(1);
+}
+.icon:hover .icon-heart {
+  /*changement de la couleur de la bodure du coeur*/
+  color: #782cd3;
+}
+
+/*pied de page des pages du site*/
+.footer_list {
+  background-color: #383838;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.footer_list h3 {
+  margin-bottom: 6px;
+  font-family: "Shrikhand", cursive;
+}
+.footer_list ul {
+  padding-left: 0;
+}
+
+.footer_list ul li {
+  margin-bottom: 7px;
+}
+.footer_list ul li a {
+  color: white;
+}
+.footer_list ul li a i {
+  padding-right: 15px;
+  color:white;
+}
+
+/*animation css du site ohmyfood*/
+.loader {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: white;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  pointer-events: none;
+  animation: loader 3s forwards;
+}
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spinner span {
+  font-size: 2rem;
+  display: inline-block;
+  position: relative;
+  top: 0;
+  animation: bounce 0.3s alternate;
+  animation-iteration-count: 4;
+  -webkit-animation-iteration-count: 4;
+  font-family: "Shrikhand";
+  background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-left: 2px;
+  padding-right: 5px;
+  text-align: center;
+  margin-right: -11px;
+}
+
+span:nth-child(1n) {
+  animation-delay: 0.1s;
+}
+
+span:nth-child(2n) {
+  animation-delay: 0.2s;
+}
+
+span:nth-child(3n) {
+  animation-delay: 0.3s;
+}
+
+span:nth-child(4n) {
+  animation-delay: 0.4s;
+}
+
+span:nth-child(5n) {
+  animation-delay: 0.5s;
+}
+
+span:nth-child(6n) {
+  animation-delay: 0.6s;
+}
+
+span:nth-child(7n) {
+  animation-delay: 0.7s;
+}
+
+span:nth-child(8n) {
+  animation-delay: 0.8s;
+}
+
+span:nth-child(9n) {
+  animation-delay: 0.9s;
+}
+
+@keyframes loader {
+  from {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes bounce {
+  from {
+    top: 0;
+  }
+  to {
+    top: -25px;
+  }
+}
