@@ -308,7 +308,7 @@ width: 60%;
 .icon-heart__full {
   background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
   /*transformation de l'icone en texte*/
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   /*animation coeur qui grandit*/
   transform: scale(0);
@@ -373,7 +373,7 @@ width: 60%;
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 10;
+  z-index: 1;
   pointer-events: none;
   animation: loader 3s forwards;
 }
@@ -391,11 +391,10 @@ width: 60%;
   top: 0;
   animation: bounce 0.3s alternate;
   animation-iteration-count: 4;
-  -webkit-animation-iteration-count: 4;
   font-family: "Shrikhand";
   background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
   padding-left: 2px;
   padding-right: 5px;
   text-align: center;
